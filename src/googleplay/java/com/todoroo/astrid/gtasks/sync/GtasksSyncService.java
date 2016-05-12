@@ -183,7 +183,7 @@ public class GtasksSyncService {
         }
     }
 
-    private static final Property<?>[] TASK_PROPERTIES = { Task.ID, Task.TITLE,
+    private static final Property<?>[] TASK_PROPERTIES = { Task.ID, Task.TITLE, Task.HIDE_UNTIL,
             Task.NOTES, Task.DUE_DATE, Task.COMPLETION_DATE, Task.DELETION_DATE };
 
     /**
