@@ -356,6 +356,7 @@ public class CustomFilterActivity extends ThemedInjectingAppCompatActivity imple
             dialogBuilder.newMessageDialog(R.string.discard_changes)
                     .setPositiveButton(R.string.keep_editing, null)
                     .setNegativeButton(R.string.discard, (dialog, which) -> finish())
+                    .setNeutralButton(R.string.save, (dialog, which) -> saveAndView())
                     .show();
         }
     }

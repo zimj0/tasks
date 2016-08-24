@@ -272,6 +272,7 @@ public final class TaskEditFragment extends InjectingFragment implements Toolbar
             dialogBuilder.newMessageDialog(R.string.discard_confirmation)
                     .setPositiveButton(R.string.keep_editing, null)
                     .setNegativeButton(R.string.discard, (dialog, which) -> discard())
+                    .setNeutralButton(R.string.save, (dialog, which) -> save())
                     .show();
         } else {
             discard();
