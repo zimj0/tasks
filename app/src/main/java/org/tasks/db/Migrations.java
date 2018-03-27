@@ -95,7 +95,7 @@ public class Migrations {
         public void migrate(@NonNull SupportSQLiteDatabase database) {
             database.execSQL("CREATE TABLE IF NOT EXISTS `google_task_lists` (`_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `remote_id` TEXT, `title` TEXT, `remote_order` INTEGER NOT NULL, `last_sync` INTEGER NOT NULL, `deleted` INTEGER NOT NULL, `color` INTEGER)");
             database.execSQL("INSERT INTO `google_task_lists` (`remote_id`, `title`, `remote_order`, `last_sync`, `color`, `deleted`) " +
-                    "SELECT `item`, `value`, `value2`, `value3`, `value4`, `deleted` FROM `store` WHERE `type` = 'gtasks-list'");
+                    "SELECT `item`, `value`, `value2`, IFNULL(`value3`, 0), `value4`, `deleted` FROM `store` WHERE `type` = 'gtasks-list'");
             database.execSQL("DROP TABLE IF EXISTS `store`");
         }
     };
