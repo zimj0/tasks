@@ -7,6 +7,7 @@ import com.todoroo.astrid.dao.Database;
 import com.todoroo.astrid.dao.TaskDao;
 import com.todoroo.astrid.provider.Astrid2TaskProvider;
 
+import com.todoroo.astrid.provider.Astrid3ContentProvider;
 import org.tasks.ErrorReportingSingleThreadExecutor;
 import org.tasks.analytics.Tracker;
 import org.tasks.data.AlarmDao;
@@ -64,7 +65,10 @@ public class ApplicationModule {
                 .allowMainThreadQueries() // TODO: remove me
                 .addMigrations(Migrations.MIGRATIONS)
                 .build()
-                .init(tracker, () -> Astrid2TaskProvider.notifyDatabaseModification(context));
+                .init(tracker, () -> {
+                    Astrid2TaskProvider.notifyDatabaseModification(context);
+                    Astrid3ContentProvider.notifyDatabaseModification(context);
+                });
     }
 
     @Provides

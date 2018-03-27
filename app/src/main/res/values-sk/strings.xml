@@ -21,6 +21,7 @@
 	<string name="DLG_error_sdcard">Chyba v prístupe do priečinka. %s</string>
 	<string name="DLG_error_sdcard_general">Chyba v prístupe k SD karte!</string>
 	<string name="read_permission_label">Povolenia Úloh</string>
+	<string name="write_permission_label">Tasks povolenia</string>
 	<string name="discard_confirmation">Naozaj nechceš uložiť zmeny?</string>
 	<string name="keep_editing">Pokračuj v úpravách</string>
 	<string name="DLG_delete_this_task_question">Vymazať túto úlohu?</string>

@@ -38,7 +38,8 @@ public class Tracking {
         TASKER_LIST_NOTIFICATION(R.string.tracking_category_tasker, R.string.tracking_action_list_notification),
         IMPORT_XML(R.string.tracking_category_backup, R.string.tracking_action_import_xml),
         IMPORT_JSON(R.string.tracking_category_backup, R.string.tracking_action_import_json),
-        EXPORT(R.string.tracking_category_backup, R.string.tracking_action_export);
+        EXPORT(R.string.tracking_category_backup, R.string.tracking_action_export),
+        ASTRID_3_CP(R.string.tracking_category_api, R.string.tracking_action_api_astrid3);
 
         public final int category;
         public final int action;
